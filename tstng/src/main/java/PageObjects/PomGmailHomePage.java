@@ -20,19 +20,19 @@ public class PomGmailHomePage extends TestBase  {
 	
 	// find compose button
 	@FindBy(how = How.XPATH, using = "//*[@gh='cm']")
-	private WebElement BtnCompose;
+	private WebElement compose;
 	
 	// find compose button
-	private List<WebElement> ListEmails;
+	private List<WebElement> listEmails;
 
 	public List<WebElement> getEmails() {
-		ListEmails =driver.findElements(By.xpath("//span[@class='bog']"));
-	      return ListEmails;
+		this.listEmails =driver.findElements(By.xpath("//span[@class='bog']"));
+	      return this.listEmails;
 	    }
 
 	// Get Compose
 	public void getCompose() {
-		BtnCompose.click();
+		this.compose.click();
 
 	}
 

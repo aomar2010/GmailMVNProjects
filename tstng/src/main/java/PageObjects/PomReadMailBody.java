@@ -38,7 +38,7 @@ public class PomReadMailBody {
 
 	// return file name
 
-	public String GetFIleName() {
+	public String getFIleName() {
 		return	LblFile.getText();
 	}
 }

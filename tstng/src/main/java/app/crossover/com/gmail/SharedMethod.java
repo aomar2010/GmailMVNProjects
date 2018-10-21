@@ -12,13 +12,14 @@ import PageObjects.PomReadMailBody;
 import PageObjects.PomSignin;
 import resources.TestBase;
 
+
 abstract public class SharedMethod extends TestBase {
 
 
 	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
-
+	
 	public void LoginMthd(String username, String password) {
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
@@ -26,10 +27,15 @@ abstract public class SharedMethod extends TestBase {
 		log.info("-------- Click Next");
 		login.getNext();
 		log.info("-------- Type Sender password  ID");
-		login.getpassword(password);
+		login.getPassword(password);
 		log.info("-------- Click Next");
-		login.getNextpassword();
-
+		login.getNextPassword();
+         try {
+			getScreenshot("file");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void ComposeMthd(String emailto) {
@@ -111,7 +117,7 @@ abstract public class SharedMethod extends TestBase {
 		assertEquals(mail.GetBody(), body);
 		System.out.println("Body is correct \n");
 		// assert file name
-		assertEquals(mail.GetFIleName(), filename);
+		assertEquals(mail.getFIleName(), filename);
 		System.out.println("File name is correct \n");
 		try {
 			Thread.sleep(5000);

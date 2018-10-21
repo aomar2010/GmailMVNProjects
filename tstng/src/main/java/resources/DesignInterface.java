@@ -7,22 +7,22 @@ public interface DesignInterface {
 
 	}
 
-	public default void ComposeMthd(String emailto) {
+	public default void composeEMail(String emailto) {
 		// TODO Auto-generated method stub
 
 	}
 
-	public default void logoutMthd() {
+	public default void logMeOut() {
 		// TODO Auto-generated method stub
 
 	}
 
-	public default void SearchEmailmthd() {
+	public default void searchEmail() {
 		// TODO Auto-generated method stub
 
 	}
 
-	public default void EmailContentmthd() {
+	public default void emailContent() {
 		// TODO Auto-generated method stub
 
 	}
