@@ -37,7 +37,7 @@ public class testcases extends SharedMethod {
 	 * Test case 2 1. login to Gmail -- Receiver user2. search for the Email with
 	 * specific title 3. logout
 	 */
-	@Test
+	//@Test()
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver
