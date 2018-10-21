@@ -9,8 +9,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import cucumber.api.java.en.Given;
-
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
@@ -27,9 +25,9 @@ public class testcases extends SharedMethod {
 		
 		log.info("login with the sender\n");
 		// login to sender email then Tab Compose
-		LoginMthd(getsender(), getpasswotd());
+		logMeIn(getsender(), getpasswotd());
 		// Type the email
-		ComposeMthd(getreciever());
+		composeEmail(getreciever());
 		System.out.println("Logout\n");
 		// Logout
 		// logoutMthd();
@@ -43,12 +41,11 @@ public class testcases extends SharedMethod {
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver
-		LoginMthd(getreciever(), getpasswotd());
-		log.info("search for the email with specific subject\n ");
+		logMeIn(getreciever(), getpasswotd());
 		// Open the received email
-		SearchEmailmthd();
+		searchEmail();
 		log.info("verify the email \n");
-		EmailContentmthd();
+		emailContent();
 		
 	}
 

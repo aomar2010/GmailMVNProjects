@@ -2,12 +2,12 @@ package resources;
 
 public interface DesignInterface {
 
-	public default void LoginMthd(String username, String password) {
+	public default void logMeIn(String username, String password) {
 		// TODO Auto-generated method stub
 
 	}
 
-	public default void composeEMail(String emailto) {
+	public default void composeEmail(String emailto) {
 		// TODO Auto-generated method stub
 
 	}

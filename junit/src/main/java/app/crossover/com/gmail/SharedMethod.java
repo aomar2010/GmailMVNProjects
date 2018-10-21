@@ -5,15 +5,11 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.runner.RunWith;
-
 import PageObjects.PomGmailHomePage;
 import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
 import PageObjects.PomSignin;
 import resources.TestBase;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 
 
 abstract public class SharedMethod extends TestBase {
@@ -23,7 +19,8 @@ abstract public class SharedMethod extends TestBase {
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	
-	public void LoginMthd(String username, String password) {
+	@Override
+	public void logMeIn(String username, String password) {
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
 		login.getUsername(username);
@@ -41,7 +38,8 @@ abstract public class SharedMethod extends TestBase {
 		}
 	}
 
-	public void ComposeMthd(String emailto) {
+	@Override
+	public void composeEmail(String emailto) {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 		homepage.getCompose();
 		PomMailbody mail = new PomMailbody(driver);
@@ -85,7 +83,8 @@ abstract public class SharedMethod extends TestBase {
 
 	}
 
-	public void logoutMthd() {
+	@Override
+	public void logMeOut() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 		// Click Logout
 		homepage.getlogout().click();
@@ -96,22 +95,29 @@ abstract public class SharedMethod extends TestBase {
 	}
 
 	// Search for the email
-	public void SearchEmailmthd() {
+	@Override
+	public void searchEmail() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 		
 		System.out.println("Open email with Subject " + subject);
 		for (int i = 0; i < homepage.getEmails().size(); i++) {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
 				homepage.getEmails().get(i).click();
-				System.out.println("email is open");
+				log.info("-------- Open the email with subject "+subject );
 				break;
+			}
+				
+			 else {
+				 log.info("-------- Email is not found ");
+
 			}
 		}
 
 	}
 
 	// check the email content
-	public void EmailContentmthd() {
+	@Override
+	public void emailContent() {
 		PomReadMailBody mail = new PomReadMailBody(driver);
 		// Assert Subject
 		assertEquals(mail.GetSubject(), subject);
@@ -121,7 +127,8 @@ abstract public class SharedMethod extends TestBase {
 		System.out.println("Body is correct \n");
 		// assert file name
 		assertEquals(mail.getFIleName(), filename);
-		System.out.println("File name is correct \n");
+		 log.info("-------- File name is correct  ");
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
