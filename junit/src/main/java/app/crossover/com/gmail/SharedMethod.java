@@ -21,6 +21,7 @@ abstract public class SharedMethod extends TestBase {
 	
 	@Override
 	public void logMeIn(String username, String password) {
+		
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
 		login.getUsername(username);
@@ -30,12 +31,23 @@ abstract public class SharedMethod extends TestBase {
 		login.getPassword(password);
 		log.info("-------- Click Next");
 		login.getNextPassword();
+		//
+		if (login.getWrongPassword()) {
+			
+			log.info("-------- Wrong credential ");
+	//	driver.quit();
+		
+		}
+		
+		
+		//
          try {
 			getScreenshot("file");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+         
 	}
 
 	@Override
