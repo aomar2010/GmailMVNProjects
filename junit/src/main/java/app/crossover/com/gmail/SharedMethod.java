@@ -30,9 +30,9 @@ abstract public class SharedMethod extends TestBase {
 		log.info("-------- Click Next");
 		login.getNext();
 		log.info("-------- Type Sender password  ID");
-		login.getpassword(password);
+		login.getPassword(password);
 		log.info("-------- Click Next");
-		login.getNextpassword();
+		login.getNextPassword();
          try {
 			getScreenshot("file");
 		} catch (IOException e) {
@@ -120,7 +120,7 @@ abstract public class SharedMethod extends TestBase {
 		assertEquals(mail.GetBody(), body);
 		System.out.println("Body is correct \n");
 		// assert file name
-		assertEquals(mail.GetFIleName(), filename);
+		assertEquals(mail.getFIleName(), filename);
 		System.out.println("File name is correct \n");
 		try {
 			Thread.sleep(5000);

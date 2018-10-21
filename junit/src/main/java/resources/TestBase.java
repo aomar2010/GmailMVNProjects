@@ -26,13 +26,13 @@ abstract public class TestBase implements DesignInterface {
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
 	//
-	String Sender;
-	String Receiver;
-	String BrowserName;
-	String TargetUrl;
-	String Password;
+	String sender;
+	String receiver;
+	String browSerName;
+	String targetUrl;
+	String password;
 	String implicitlyWait;
-	String driverpath;
+	String driverPath;
 	//
 
 	public WebDriver initializeDriver() throws IOException {
@@ -103,13 +103,13 @@ abstract public class TestBase implements DesignInterface {
 	}
 
 	public void setChromedriverPath(String driverpath) {
-		this.driverpath = driverpath;
+		this.driverPath = driverpath;
 		
 	}
 	
 	public String getChromedriverpath() {
 
-		return this.driverpath;
+		return this.driverPath;
 
 	}
 
@@ -124,7 +124,7 @@ abstract public class TestBase implements DesignInterface {
 	}
 
 	private void seturl(String url) {
-		this.TargetUrl = url;
+		this.targetUrl = url;
 	}
 	
 	
@@ -132,44 +132,44 @@ abstract public class TestBase implements DesignInterface {
 
 	public String geturl() {
 
-		return this.TargetUrl;
+		return this.targetUrl;
 
 	}
 
 	public void setbrowser(String browser) {
 
-		this.BrowserName = browser;
+		this.browSerName = browser;
 
 	}
 
 	public String getbrowser() {
-		return this.BrowserName;
+		return this.browSerName;
 	}
 
 	public void setreceiver(String receiver) {
-		this.Receiver = receiver;
+		this.receiver = receiver;
 	}
 
 	public String getreciever() {
-		return this.Receiver;
+		return this.receiver;
 	}
 
 	public void setsender(String sender) {
 
-		this.Sender = sender;
+		this.sender = sender;
 	}
 
 	public String getsender() {
-		return this.Sender;
+		return this.sender;
 	}
 
 	public void setpassword(String Password) {
 
-		this.Password = Password;
+		this.password = Password;
 	}
 
 	public String getpasswotd() {
-		return this.Password;
+		return this.password;
 	}
 
 }
