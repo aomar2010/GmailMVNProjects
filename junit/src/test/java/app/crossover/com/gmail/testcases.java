@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -18,6 +19,7 @@ public class testcases extends SharedMethod {
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
 	 * Email with attached file 3. logout
 	 */
+//	@Ignore("Im Not Ready")
 	@Test
 	
 	public void FirstComposeEmail(  )
@@ -37,7 +39,8 @@ public class testcases extends SharedMethod {
 	 * Test case 2 1. login to Gmail -- Receiver user2. search for the Email with
 	 * specific title 3. logout
 	 */
-	//@Test()
+	//@Ignore("Im Not Ready")
+	@Test 
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver
@@ -45,7 +48,7 @@ public class testcases extends SharedMethod {
 		// Open the received email
 		searchEmail();
 		log.info("verify the email \n");
-		emailContent();
+		//emailContent();
 		
 	}
 
@@ -59,7 +62,7 @@ public class testcases extends SharedMethod {
 
 	}
 
-	@After
+//	@After
 	public void afterMethod() {
 		driver.quit();
 		driver = null;

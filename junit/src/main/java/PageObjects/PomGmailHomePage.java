@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import resources.TestBase;
 
-public class PomGmailHomePage extends TestBase  {
+public  class PomGmailHomePage extends TestBase  {
 
 
 	public PomGmailHomePage(WebDriver driver) {
@@ -35,27 +35,27 @@ public class PomGmailHomePage extends TestBase  {
 		this.compose.click();
 
 	}
-
 	
-
+	// right click Archive 
+	@FindBy(how = How.XPATH, using = "//*[@class='J-N-JX aDE aDD']")
+	private WebElement archive;
 	
-	
-	// Click Menu to logout
-	By menu = By.xpath("//*[@id=\"gb\"]/div[2]/div[3]/div/div[2]");
+	// Get Compose
+	public void getArchive() {
+		this.archive.click();
 
-	// Get Menu
-	public WebElement GetMenu() {
-		return driver.findElement(menu);
 	}
 
-	// Find logout
-	By logout = By.cssSelector("#gb_71");
 
-	// Get Logout
-	public WebElement getlogout() {
-		return driver.findElement(logout);
 
-	}
+	
+
+	
+	
+	
+
+
+	
 
 
 }

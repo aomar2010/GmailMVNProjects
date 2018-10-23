@@ -5,6 +5,10 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import PageObjects.PomGmailHomePage;
 import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
@@ -15,9 +19,10 @@ import resources.TestBase;
 abstract public class SharedMethod extends TestBase {
 
 
-	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject ="kgsyferilfzhylgqakno";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
+	public static WebElement row;
 	
 	@Override
 	public void logMeIn(String username, String password) {
@@ -95,16 +100,6 @@ abstract public class SharedMethod extends TestBase {
 
 	}
 
-	@Override
-	public void logMeOut() {
-		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-		// Click Logout
-		homepage.getlogout().click();
-		// Delete All cookies
-		driver.manage().deleteAllCookies();
-		// refresh after clearing cookies
-		driver.navigate().refresh();
-	}
 
 	// Search for the email
 	@Override
@@ -114,17 +109,36 @@ abstract public class SharedMethod extends TestBase {
 		System.out.println("Open email with Subject " + subject);
 		for (int i = 0; i < homepage.getEmails().size(); i++) {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
-				homepage.getEmails().get(i).click();
-				log.info("-------- Open the email with subject "+subject );
-				break;
+			//
+				row=homepage.getEmails().get(i);
+
+				String reqaction="archive";
+				 switch (reqaction) {
+		            case "archive": 
+		            	Actions action = new Actions(driver);
+		        		action.contextClick(row).perform();
+		        		homepage.getArchive();
+		        		i=homepage.getEmails().size();
+		                     break;
+		            case "open": 
+		            	row.click();
+		                     break;
+				//homepage.getEmails().get(i).click();
+				//log.info("-------- Open the email with subject "+subject );
+				  
+			}
 			}
 				
 			 else {
 				 log.info("-------- Email is not found ");
+	        		i=homepage.getEmails().size();
+
 
 			}
 		}
-
+		
+	
+		
 	}
 
 	// check the email content
@@ -148,5 +162,17 @@ abstract public class SharedMethod extends TestBase {
 			e.printStackTrace();
 		}
 	}
+	
+	@Override
+	public void rightMenu() {
+		
 
+	}
+	
+	@Override
+	public void searchForEmailInGrid() {
+		
+	}
+
+	
 }
