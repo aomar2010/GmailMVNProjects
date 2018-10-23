@@ -26,5 +26,20 @@ public interface DesignInterface {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public default void mouseHover() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+
+	public default 	void rightMenu() {
+	}
+	public default void searchForEmailInGrid() {
+	}
+
+	
+	
 
 }
