@@ -10,6 +10,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import methods.crossover.com.gmail.SharedMethod;
+
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
@@ -19,7 +21,7 @@ public class testcases extends SharedMethod {
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
 	 * Email with attached file 3. logout
 	 */
-//	@Ignore("Im Not Ready")
+	@Ignore("Im Not Ready")
 	@Test
 	
 	public void FirstComposeEmail(  )

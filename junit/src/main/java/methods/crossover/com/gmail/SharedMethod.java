@@ -1,4 +1,4 @@
-package app.crossover.com.gmail;
+package methods.crossover.com.gmail;
 
 import static org.testng.Assert.assertEquals;
 
@@ -19,7 +19,7 @@ import resources.TestBase;
 abstract public class SharedMethod extends TestBase {
 
 
-	public static String subject ="kgsyferilfzhylgqakno";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject ="utjwsmhdimjrdkbocppr";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
@@ -111,23 +111,10 @@ abstract public class SharedMethod extends TestBase {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
 			//
 				row=homepage.getEmails().get(i);
-
-				String reqaction="archive";
-				 switch (reqaction) {
-		            case "archive": 
-		            	Actions action = new Actions(driver);
-		        		action.contextClick(row).perform();
-		        		homepage.getArchive();
-		        		i=homepage.getEmails().size();
-		                     break;
-		            case "open": 
-		            	row.click();
-		                     break;
-				//homepage.getEmails().get(i).click();
-				//log.info("-------- Open the email with subject "+subject );
-				  
-			}
-			}
+				//rightMenu();
+				mouseHover();
+				
+              }
 				
 			 else {
 				 log.info("-------- Email is not found ");
@@ -165,14 +152,56 @@ abstract public class SharedMethod extends TestBase {
 	
 	@Override
 	public void rightMenu() {
+		PomGmailHomePage homepage = new PomGmailHomePage(driver);
+
+		Actions action = new Actions(driver);
+		action.contextClick(row).perform();
+		String reqaction="archive";
+		 switch (reqaction) {
+           case "archive": 
+       		homepage.getArchive();
+                    break;
+           case "open": 
+           	row.click();
+                    break;
+           case "delete": 
+           	
+           	homepage.getDelete();
+           	break;
+           case "MakeAsUnread": 
+           	homepage.getMakeAsUnread();
+           	break;
+		
+		  
+	}
 		
 
 	}
 	
 	@Override
-	public void searchForEmailInGrid() {
+	public void mouseHover() {
+		Actions action = new Actions(driver);
+		action.moveToElement(row).build().perform();
+		PomGmailHomePage homepage = new PomGmailHomePage(driver);
+		String reqaction="delete";
+		 switch (reqaction) {
+           case "archive": 
+       		homepage.getArchive();
+                    break;
+           case "open": 
+           	row.click();
+                    break;
+           case "delete": 
+           	
+           	homepage.getMouseHoverDelete();
+           	break;
+           case "MakeAsUnread": 
+           	homepage.getMakeAsUnread();
+           	break;
+
 		
 	}
 
 	
 }
+	}
