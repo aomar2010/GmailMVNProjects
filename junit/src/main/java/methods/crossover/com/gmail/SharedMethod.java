@@ -112,7 +112,8 @@ abstract public class SharedMethod extends TestBase {
 			//
 				row=homepage.getEmails().get(i);
 				//rightMenu();
-				mouseHover();
+			//	mouseHover();
+				//row.click();
 				
               }
 				
