@@ -15,41 +15,39 @@
   </properties>
 
   <dependencies>
- 
- 
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>1.2.5</version>
-</dependency>
-  
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>1.2.5</version>
-</dependency>
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 <dependency>
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>1.2.5</version>
     <scope>test</scope>
 </dependency>
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps -->
+
+
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 <dependency>
     <groupId>info.cukes</groupId>
-    <artifactId>cucumber-jvm-deps</artifactId>
-    <version>1.0.5</version>
-    <scope>provided</scope>
+    <artifactId>cucumber-java</artifactId>
+    <version>1.2.5</version>
 </dependency>
-  <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
 <dependency>
-    <groupId>net.masterthought</groupId>
-    <artifactId>cucumber-reporting</artifactId>
-    <version>4.0.0</version>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-jvm</artifactId>
+    <version>1.2.5</version>
+    <type>pom</type>
 </dependency>
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>1.2.5</version>
+</dependency>
+
+
+
+
   <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
 <dependency>
     <groupId>info.cukes</groupId>

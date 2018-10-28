@@ -1,7 +1,14 @@
 Feature: Login Action
 
 Scenario: Successful Login with Valid Credentials
-	Given User is on http://gmail.com
-	When User Navigate to LogIn Page
-	And User enters UserName and Password
-	Then Email Lists appeared 
+	Given Open chrome 
+	When  Navigate to gmail.com
+	And Login UserName and Password
+	Then Compose the Email
+	Then Quit the driver
+	Then Navigate to gmail.com
+	And Login RecieverEmail  and Password
+	Then Open the Email with Specific title 
+	And Validate the content 
+	Then Quit the driver
+	
