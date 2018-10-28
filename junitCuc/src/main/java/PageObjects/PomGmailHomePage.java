@@ -20,7 +20,14 @@ public class PomGmailHomePage extends TestBase {
 	// find compose button
 	@FindBy(how = How.XPATH, using = "//*[@gh='cm']")
 	private WebElement compose;
-
+	
+	// find user Menu logout
+		@FindBy(how = How.XPATH, using = "//*[@class='gb_9a gbii']")
+		private WebElement userMenulogout;
+		
+		// find user  logout
+		@FindBy(how = How.XPATH, using = "//*[contains(text(), 'Sign out')]")
+		private WebElement logout;
 	// find compose button
 	private List<WebElement> listEmails;
 
@@ -79,6 +86,15 @@ public class PomGmailHomePage extends TestBase {
 		this.mouseHoverDelete.click();
 	}
 
+	// Get user Menu logout
+		public void getUserLogout() {
+			this.userMenulogout.click();
+		}
+		// Get  logout
+				public void getLogout() {
+					this.logout.click();
+					
+				}
 	// Get Mouse hover Archive
 	public void getMouseHoverArchive() {
 		this.mouseHoverArchive.click();

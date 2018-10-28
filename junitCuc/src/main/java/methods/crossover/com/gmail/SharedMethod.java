@@ -19,7 +19,7 @@ import resources.TestBase;
 abstract public class SharedMethod extends TestBase {
 
 
-	public static String subject ="utjwsmhdimjrdkbocppr";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
@@ -40,7 +40,6 @@ abstract public class SharedMethod extends TestBase {
 		if (login.getWrongPassword()) {
 			
 			log.info("-------- Wrong credential ");
-	//	driver.quit();
 		
 		}
 		
@@ -178,7 +177,16 @@ abstract public class SharedMethod extends TestBase {
 		
 
 	}
-	
+
+	@Override
+	public  void logMeOut() {
+		PomGmailHomePage homepage = new PomGmailHomePage(driver);
+
+		homepage.getUserLogout();
+		homepage.getLogout();
+		driver.manage().deleteAllCookies();
+		driver.navigate().to("http://gmail.com");
+	}
 	@Override
 	public void mouseHover() {
 		Actions action = new Actions(driver);

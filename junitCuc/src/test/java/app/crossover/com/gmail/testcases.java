@@ -48,8 +48,9 @@ public class testcases extends SharedMethod {
 		log.info("login with the sender\n");
 		// login with receiver
 		logMeIn(getreciever(), getpasswotd());
+		logMeOut();
 		// Open the received email
-		searchEmail();
+		// searchEmail();
 		log.info("verify the email \n");
 		//emailContent();
 		

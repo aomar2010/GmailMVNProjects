@@ -31,6 +31,7 @@ public interface DesignInterface {
 
 	public default 	void rightMenu() {
 	}
+	
 	public default void searchForEmailInGrid() {
 	}
 
