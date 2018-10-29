@@ -12,11 +12,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
 import methods.crossover.com.gmail.SharedMethod;
+import methods.crossover.com.gmail.propertiesFile;
 
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 	
 public class testcases extends SharedMethod {
+	propertiesFile config=new propertiesFile(); 	
 
 	/*
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
@@ -30,9 +32,9 @@ public class testcases extends SharedMethod {
 		
 		log.info("login with the sender\n");
 		// login to sender email then Tab Compose
-		logMeIn(getsender(), getpasswotd());
+		logMeIn(config.getsender(),config.getpasswotd());
 		// Type the email
-		composeEmail(getreciever());
+		composeEmail(config.getreciever());
 		System.out.println("Logout\n");
 		// Logout
 		// logoutMthd();
@@ -47,7 +49,7 @@ public class testcases extends SharedMethod {
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver
-		logMeIn(getreciever(), getpasswotd());
+		logMeIn(config.getreciever(), config.getpasswotd());
 		logMeOut();
 		// Open the received email
 		// searchEmail();
@@ -60,9 +62,9 @@ public class testcases extends SharedMethod {
 	public void beforeMethod() throws IOException {
 		System.out.println("New driver instantiated \n");
 		driver = initializeDriver();
-		driver.manage().timeouts().implicitlyWait(Integer.parseInt(getimplicitlyWait()), TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getimplicitlyWait()), TimeUnit.SECONDS);
 		System.out.println("Type URL\n");
-		driver.navigate().to(geturl());
+		driver.navigate().to(config.geturl());
 
 	}
 

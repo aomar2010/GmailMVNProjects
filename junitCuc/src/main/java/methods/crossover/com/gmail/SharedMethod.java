@@ -26,7 +26,7 @@ abstract public class SharedMethod extends TestBase {
 	
 	@Override
 	public void logMeIn(String username, String password) {
-		
+
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
 		login.getUsername(username);
