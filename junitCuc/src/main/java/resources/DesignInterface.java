@@ -3,7 +3,6 @@ package resources;
 public interface DesignInterface {
 
 	public default void logMeIn(String username, String password) {
-		
 
 	}
 
@@ -22,20 +21,15 @@ public interface DesignInterface {
 	public default void emailContent() {
 
 	}
-	
+
 	public default void mouseHover() {
 
 	}
-	
-	
 
-	public default 	void rightMenu() {
+	public default void rightMenu() {
 	}
-	
+
 	public default void searchForEmailInGrid() {
 	}
-
-	
-	
 
 }

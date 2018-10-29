@@ -10,8 +10,6 @@ import resources.TestBase;
 
 public class PomMailbody extends TestBase {
 
-	
-
 	public PomMailbody(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -25,15 +23,15 @@ public class PomMailbody extends TestBase {
 	private WebElement subject;
 
 	// Subject button
-	@FindBy(how = How.XPATH, using ="//div[@class='Am Al editable LW-avf']")
+	@FindBy(how = How.XPATH, using = "//div[@class='Am Al editable LW-avf']")
 	private WebElement body;
 
 	// File button
-		@FindBy(how = How.XPATH, using ="//div[@class='a1 aaA aMZ']")
-		private WebElement file;
-		// File button
-				@FindBy(how = How.CSS, using ="tr.btC td:nth-of-type(1) div div:nth-of-type(2)")
-				private WebElement send;
+	@FindBy(how = How.XPATH, using = "//div[@class='a1 aaA aMZ']")
+	private WebElement file;
+	// File button
+	@FindBy(how = How.CSS, using = "tr.btC td:nth-of-type(1) div div:nth-of-type(2)")
+	private WebElement send;
 
 	// Get To text box
 	public void GetTo(String to) {

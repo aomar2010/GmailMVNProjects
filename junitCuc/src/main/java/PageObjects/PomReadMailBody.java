@@ -24,11 +24,9 @@ public class PomReadMailBody {
 	@FindBy(how = How.CSS, using = "div.aQA span")
 	private WebElement LblFile;
 
-
-
 	// return Subject
-	public String  GetSubject() {
-	return LblSubject.getText();	
+	public String GetSubject() {
+		return LblSubject.getText();
 	}
 
 	// return Subject
@@ -39,6 +37,6 @@ public class PomReadMailBody {
 	// return file name
 
 	public String getFIleName() {
-		return	LblFile.getText();
+		return LblFile.getText();
 	}
 }

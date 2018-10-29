@@ -5,7 +5,6 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -14,16 +13,16 @@ import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
 import PageObjects.PomSignin;
 import resources.TestBase;
-
+import resources.propertiesFile;
 
 abstract public class SharedMethod extends TestBase {
-
 
 	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
-	
+	protected propertiesFile config = new propertiesFile();
+
 	@Override
 	public void logMeIn(String username, String password) {
 
@@ -38,20 +37,19 @@ abstract public class SharedMethod extends TestBase {
 		login.getNextPassword();
 		//
 		if (login.getWrongPassword()) {
-			
+
 			log.info("-------- Wrong credential ");
-		
+
 		}
-		
-		
+
 		//
-         try {
+		try {
 			getScreenshot("file");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-         
+
 	}
 
 	@Override
@@ -79,7 +77,7 @@ abstract public class SharedMethod extends TestBase {
 		}
 
 		try {
-		Thread.sleep(15000);
+			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -95,37 +93,33 @@ abstract public class SharedMethod extends TestBase {
 			e.printStackTrace();
 		}
 		// Click Menu
-		//homepage.GetMenu().click();
+		// homepage.GetMenu().click();
 
 	}
-
 
 	// Search for the email
 	@Override
 	public void searchEmail() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-		
+
 		System.out.println("Open email with Subject " + subject);
 		for (int i = 0; i < homepage.getEmails().size(); i++) {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
-			//
-				row=homepage.getEmails().get(i);
-				//rightMenu();
-			//	mouseHover();
-				//row.click();
-				
-              }
-				
-			 else {
-				 log.info("-------- Email is not found ");
-	        		i=homepage.getEmails().size();
+				//
+				row = homepage.getEmails().get(i);
+				// rightMenu();
+				// mouseHover();
+				// row.click();
 
+			}
+
+			else {
+				log.info("-------- Email is not found ");
+				i = homepage.getEmails().size();
 
 			}
 		}
-		
-	
-		
+
 	}
 
 	// check the email content
@@ -140,7 +134,7 @@ abstract public class SharedMethod extends TestBase {
 		System.out.println("Body is correct \n");
 		// assert file name
 		assertEquals(mail.getFIleName(), filename);
-		 log.info("-------- File name is correct  ");
+		log.info("-------- File name is correct  ");
 
 		try {
 			Thread.sleep(5000);
@@ -149,37 +143,35 @@ abstract public class SharedMethod extends TestBase {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public void rightMenu() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 
 		Actions action = new Actions(driver);
 		action.contextClick(row).perform();
-		String reqaction="archive";
-		 switch (reqaction) {
-           case "archive": 
-       		homepage.getArchive();
-                    break;
-           case "open": 
-           	row.click();
-                    break;
-           case "delete": 
-           	
-           	homepage.getDelete();
-           	break;
-           case "MakeAsUnread": 
-           	homepage.getMakeAsUnread();
-           	break;
-		
-		  
-	}
-		
+		String reqaction = "archive";
+		switch (reqaction) {
+		case "archive":
+			homepage.getArchive();
+			break;
+		case "open":
+			row.click();
+			break;
+		case "delete":
+
+			homepage.getDelete();
+			break;
+		case "MakeAsUnread":
+			homepage.getMakeAsUnread();
+			break;
+
+		}
 
 	}
 
 	@Override
-	public  void logMeOut() {
+	public void logMeOut() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 
 		homepage.getUserLogout();
@@ -187,30 +179,29 @@ abstract public class SharedMethod extends TestBase {
 		driver.manage().deleteAllCookies();
 		driver.navigate().to("http://gmail.com");
 	}
+
 	@Override
 	public void mouseHover() {
 		Actions action = new Actions(driver);
 		action.moveToElement(row).build().perform();
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-		String reqaction="delete";
-		 switch (reqaction) {
-           case "archive": 
-       		homepage.getArchive();
-                    break;
-           case "open": 
-           	row.click();
-                    break;
-           case "delete": 
-           	
-           	homepage.getMouseHoverDelete();
-           	break;
-           case "MakeAsUnread": 
-           	homepage.getMakeAsUnread();
-           	break;
+		String reqaction = "delete";
+		switch (reqaction) {
+		case "archive":
+			homepage.getArchive();
+			break;
+		case "open":
+			row.click();
+			break;
+		case "delete":
 
-		
+			homepage.getMouseHoverDelete();
+			break;
+		case "MakeAsUnread":
+			homepage.getMakeAsUnread();
+			break;
+
+		}
+
 	}
-
-	
 }
-	}

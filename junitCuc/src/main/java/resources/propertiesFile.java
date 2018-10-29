@@ -1,4 +1,4 @@
-package methods.crossover.com.gmail;
+package resources;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,9 +14,9 @@ public class propertiesFile {
 	String password;
 	String implicitlyWait;
 	String driverPath;
+
 	//
 	public propertiesFile() {
-
 
 		String ar[] = new String[5];
 		Properties prop = new Properties();
@@ -37,8 +37,6 @@ public class propertiesFile {
 			setimplicitlyWait(prop.getProperty("implicitlyWait"));
 			setChromedriverPath(prop.getProperty("driverPath"));
 
-			
-
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		} finally {
@@ -51,13 +49,13 @@ public class propertiesFile {
 			}
 		}
 
-
 	}
+
 	public void setChromedriverPath(String driverpath) {
 		this.driverPath = driverpath;
-		
+
 	}
-	
+
 	public String getChromedriverpath() {
 
 		return this.driverPath;
@@ -66,8 +64,9 @@ public class propertiesFile {
 
 	public void setimplicitlyWait(String implicitlyWait) {
 		this.implicitlyWait = implicitlyWait;
-		
+
 	}
+
 	public String getimplicitlyWait() {
 
 		return this.implicitlyWait;
@@ -77,9 +76,6 @@ public class propertiesFile {
 	private void seturl(String url) {
 		this.targetUrl = url;
 	}
-	
-	
-	
 
 	public String geturl() {
 
@@ -122,6 +118,5 @@ public class propertiesFile {
 	public String getpasswotd() {
 		return this.password;
 	}
-
 
 }

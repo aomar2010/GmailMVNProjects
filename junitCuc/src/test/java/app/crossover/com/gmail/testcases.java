@@ -3,22 +3,19 @@ package app.crossover.com.gmail;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
 import methods.crossover.com.gmail.SharedMethod;
-import methods.crossover.com.gmail.propertiesFile;
-
+import resources.propertiesFile;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-	
+
 public class testcases extends SharedMethod {
-	propertiesFile config=new propertiesFile(); 	
+	propertiesFile config = new propertiesFile();
 
 	/*
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
@@ -26,13 +23,12 @@ public class testcases extends SharedMethod {
 	 */
 	@Ignore("Im Not Ready")
 	@Test
-	
-	public void FirstComposeEmail(  )
-			throws IOException, InterruptedException {
-		
+
+	public void FirstComposeEmail() throws IOException, InterruptedException {
+
 		log.info("login with the sender\n");
 		// login to sender email then Tab Compose
-		logMeIn(config.getsender(),config.getpasswotd());
+		logMeIn(config.getsender(), config.getpasswotd());
 		// Type the email
 		composeEmail(config.getreciever());
 		System.out.println("Logout\n");
@@ -44,8 +40,8 @@ public class testcases extends SharedMethod {
 	 * Test case 2 1. login to Gmail -- Receiver user2. search for the Email with
 	 * specific title 3. logout
 	 */
-	//@Ignore("Im Not Ready")
-	@Test 
+	// @Ignore("Im Not Ready")
+	@Test
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver
@@ -54,8 +50,8 @@ public class testcases extends SharedMethod {
 		// Open the received email
 		// searchEmail();
 		log.info("verify the email \n");
-		//emailContent();
-		
+		// emailContent();
+
 	}
 
 	@Before
@@ -68,7 +64,7 @@ public class testcases extends SharedMethod {
 
 	}
 
-//	@After
+	// @After
 	public void afterMethod() {
 		driver.quit();
 		driver = null;

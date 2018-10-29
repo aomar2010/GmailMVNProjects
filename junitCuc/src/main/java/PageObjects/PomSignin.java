@@ -18,7 +18,7 @@ public class PomSignin {
 		PageFactory.initElements(driver, this);
 
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//*[@id='identifierId']")
 	private WebElement userName;
 
@@ -34,7 +34,6 @@ public class PomSignin {
 	@FindBy(how = How.XPATH, using = "//*[@jsname='B34EJ'][@class='dEOOab RxsGPe'][1]")
 	private WebElement wrongPassword;
 
-	
 	// get username
 	public void getUsername(String userName) {
 		this.userName.sendKeys(userName);
@@ -57,19 +56,19 @@ public class PomSignin {
 
 		this.nextPassword.click();
 	}
-	
-	// wrong password 
-	
+
+	// wrong password
+
 	// get username
-		public boolean getWrongPassword() {
-			boolean crd=this.wrongPassword.isDisplayed();
-			return this.wrongPassword.isDisplayed();
-		}
+	public boolean getWrongPassword() {
+		boolean crd = this.wrongPassword.isDisplayed();
+		return this.wrongPassword.isDisplayed();
+	}
 
-		// return Worng Password 
-		public void setWrongPassword() {
-			this.wrongPassword.isDisplayed();
+	// return Worng Password
+	public void setWrongPassword() {
+		this.wrongPassword.isDisplayed();
 
-		}
+	}
 
 }
