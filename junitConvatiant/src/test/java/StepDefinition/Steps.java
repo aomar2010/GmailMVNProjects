@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import methods.crossover.com.gmail.SharedMethod;
+import methods.crossover.com.gmail.rightClick;
 
 public class Steps extends SharedMethod {
 
@@ -21,7 +22,7 @@ public class Steps extends SharedMethod {
 		System.out.println("This step user navigate to gmail .");
 		driver.navigate().to(config.geturl());
 	}
-
+/*
 	@And("^Login with sender email and Password$")
 	public void TypeUsernameAndPassword() throws IOException, InterruptedException {
 		System.out.println("This step User enters UserName and Password.");
@@ -40,7 +41,7 @@ public class Steps extends SharedMethod {
 		System.out.println("This step the Email List appeared.");
 		logMeOut();
 	}
-
+*/
 	@Given("^Login RecieverEmail  and Password$")
 	public void TypeRecieverEmailAndPassword() throws IOException, InterruptedException {
 		// PropertiesConfig();
@@ -50,13 +51,15 @@ public class Steps extends SharedMethod {
 
 	@Then("^Open the Email with Specific title$")
 	public void Open_Email_ByTitle() throws IOException, InterruptedException {
+
 		System.out.println("This step User enters UserName and Password.");
-		searchEmail();
+		searchForEmail().EmailRightClick().ArchiveEmail();
+		Thread.sleep(10000);
 	}
 
 	@And("^Quit the driver$")
 	public void Quit_the_Driver() throws Throwable {
-		System.out.println("This step the Email List appeared.");
+		System.out.println("This step close the driver.");
 		driver.quit();
 		driver = null;
 	}

@@ -21,27 +21,25 @@ public class testcases extends SharedMethod {
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
 	 * Email with attached file 3. logout
 	 */
-	@Ignore("Im Not Ready")
+//	@Ignore("Im Not Ready")
 	@Test
 
 	public void FirstComposeEmail() throws IOException, InterruptedException {
 
 		log.info("login with the sender\n");
 		// login to sender email then Tab Compose
-		logMeIn(config.getsender(), config.getpasswotd());
-		// Type the email
-		composeEmail(config.getreciever());
+		logMeIn(config.getsender(), config.getpasswotd()).composeEmail(config.getreciever()).logMeOut();
 		System.out.println("Logout\n");
-		// Logout
-		// logoutMthd();
+
 	}
 
 	/*
 	 * Test case 2 1. login to Gmail -- Receiver user2. search for the Email with
 	 * specific title 3. logout
 	 */
-	// @Ignore("Im Not Ready")
-	@Test
+	@Ignore("Im Not Ready")
+
+	@Test 
 	public void SecondCheckReceiver() throws IOException, InterruptedException {
 		log.info("login with the sender\n");
 		// login with receiver

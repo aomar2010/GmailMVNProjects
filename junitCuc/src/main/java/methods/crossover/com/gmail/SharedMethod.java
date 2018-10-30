@@ -173,7 +173,7 @@ abstract public class SharedMethod extends TestBase {
 	@Override
 	public void logMeOut() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-
+       
 		homepage.getUserLogout();
 		homepage.getLogout();
 		driver.manage().deleteAllCookies();

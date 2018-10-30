@@ -17,14 +17,14 @@ import resources.propertiesFile;
 
 abstract public class SharedMethod extends TestBase {
 
-	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject = "ojtbefebvgnpvciiiinb";//RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
 	protected propertiesFile config = new propertiesFile();
 
 	@Override
-	public void logMeIn(String username, String password) {
+	public SharedMethod logMeIn(String username, String password) {
 
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
@@ -49,11 +49,12 @@ abstract public class SharedMethod extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return this;
 
 	}
 
 	@Override
-	public void composeEmail(String emailto) {
+	public SharedMethod composeEmail(String emailto) {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
 		homepage.getCompose();
 		PomMailbody mail = new PomMailbody(driver);
@@ -92,16 +93,14 @@ abstract public class SharedMethod extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// Click Menu
-		// homepage.GetMenu().click();
+		return this;
 
 	}
 
 	// Search for the email
 	@Override
-	public void searchEmail() {
+	public rightClick searchForEmail() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-
 		System.out.println("Open email with Subject " + subject);
 		for (int i = 0; i < homepage.getEmails().size(); i++) {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
@@ -112,13 +111,14 @@ abstract public class SharedMethod extends TestBase {
 				// row.click();
 
 			}
-
+ 
 			else {
 				log.info("-------- Email is not found ");
 				i = homepage.getEmails().size();
 
 			}
 		}
+		return new rightClick() ;
 
 	}
 
@@ -143,7 +143,7 @@ abstract public class SharedMethod extends TestBase {
 			e.printStackTrace();
 		}
 	}
-
+/*
 	@Override
 	public void rightMenu() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
@@ -169,7 +169,7 @@ abstract public class SharedMethod extends TestBase {
 		}
 
 	}
-
+*/
 	@Override
 	public void logMeOut() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
@@ -202,6 +202,12 @@ abstract public class SharedMethod extends TestBase {
 			break;
 
 		}
+		
 
+	}
+
+	@Override
+	public	void openEmail() {
+		row.click();		
 	}
 }
