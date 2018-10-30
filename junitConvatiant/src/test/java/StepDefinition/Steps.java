@@ -22,7 +22,7 @@ public class Steps extends SharedMethod {
 		System.out.println("This step user navigate to gmail .");
 		driver.navigate().to(config.geturl());
 	}
-/*
+
 	@And("^Login with sender email and Password$")
 	public void TypeUsernameAndPassword() throws IOException, InterruptedException {
 		System.out.println("This step User enters UserName and Password.");
@@ -41,7 +41,7 @@ public class Steps extends SharedMethod {
 		System.out.println("This step the Email List appeared.");
 		logMeOut();
 	}
-*/
+
 	@Given("^Login RecieverEmail  and Password$")
 	public void TypeRecieverEmailAndPassword() throws IOException, InterruptedException {
 		// PropertiesConfig();
