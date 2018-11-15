@@ -110,28 +110,7 @@ import resources.propertiesFile;
 	// Search for the email
 	
 
-	// check the email content
-	@Override
-	public void emailContent() {
-		PomReadMailBody mail = new PomReadMailBody(driver);
-		// Assert Subject
-		assertEquals(mail.GetSubject(), subject);
-		System.out.println("Subject is correct \n");
-		// Assert Body
-		assertEquals(mail.GetBody(), body);
-		System.out.println("Body is correct \n");
-		// assert file name
-		assertEquals(mail.getFIleName(), filename);
-		log.info("-------- File name is correct  ");
-
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
+	
 	@Override
 	public void rightMenu() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
@@ -192,23 +171,5 @@ import resources.propertiesFile;
 		}
 
 	}
-	@Override
-	public void dragDrop() throws InterruptedException {
-		PomGmailHomePage homePage=new PomGmailHomePage(driver);
-		
-		
-		Actions action = new Actions(driver);
-		action.moveToElement(homePage.lefttab);
-		
-			Thread.sleep(2000);
 	
-		//// scroll
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].scrollIntoView();", homePage.dragTo);
-		
-		 action.dragAndDrop(row,homePage.dragTo).build().perform();
-		 // System.out.println("done");
-		
-		
-	} 
 }

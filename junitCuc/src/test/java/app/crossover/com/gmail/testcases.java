@@ -34,7 +34,7 @@ public  class testcases extends SharedMethod {
 	
 		// Type the email
 	//	searchEmail();
-	//	dragDrop();
+		dragDrop();
 		// Logout
 		// logoutMthd();
 	}
