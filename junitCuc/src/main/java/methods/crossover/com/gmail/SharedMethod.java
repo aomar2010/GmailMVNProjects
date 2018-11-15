@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -17,7 +18,7 @@ import resources.propertiesFile;
 
 abstract public class SharedMethod extends TestBase {
 
-	public static String subject = RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject ="qmbvnsbhithxtqaukzbe";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
@@ -107,9 +108,7 @@ abstract public class SharedMethod extends TestBase {
 			if (homepage.getEmails().get(i).getText().contains(subject)) {
 				//
 				row = homepage.getEmails().get(i);
-				// rightMenu();
-				// mouseHover();
-				// row.click();
+				System.out.println("Open email with Subject " + subject);
 
 			}
 
@@ -204,4 +203,23 @@ abstract public class SharedMethod extends TestBase {
 		}
 
 	}
+	@Override
+	public void dragDrop() throws InterruptedException {
+		PomGmailHomePage homePage=new PomGmailHomePage(driver);
+		
+		
+		Actions action = new Actions(driver);
+		action.moveToElement(homePage.lefttab);
+		
+			Thread.sleep(2000);
+	
+		//// scroll
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("arguments[0].scrollIntoView();", homePage.dragTo);
+		
+		 action.dragAndDrop(row,homePage.dragTo).build().perform();
+		 // System.out.println("done");
+		
+		
+	} 
 }

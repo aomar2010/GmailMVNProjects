@@ -28,6 +28,7 @@ public class PomGmailHomePage extends TestBase {
 	// find user logout
 	@FindBy(how = How.XPATH, using = "//*[contains(text(), 'Sign out')]")
 	private WebElement logout;
+	
 	// find compose button
 	private List<WebElement> listEmails;
 
@@ -46,6 +47,10 @@ public class PomGmailHomePage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//*[contains(text(), 'Archive')]")
 	private WebElement archive;
 
+	// left part of the page 
+	@FindBy(how = How.XPATH, using = "//*[@class='byl']")
+	public WebElement lefttab;
+	
 	// right click delete
 	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Delete')]")
 	private WebElement delete;
@@ -63,7 +68,11 @@ public class PomGmailHomePage extends TestBase {
 	// Mouse Hover Make as read
 	@FindBy(how = How.XPATH, using = "//*[@data-tooltip='Mark as unread']")
 	private WebElement mouseHoverMakeAsRead;
-
+	// Drag to 
+	@FindBy(how = How.XPATH, using = "//*[@title='DragDrop']")
+	public WebElement dragTo;
+	
+	
 	// Get Archive
 	public void getArchive() {
 		this.archive.click();
@@ -101,5 +110,8 @@ public class PomGmailHomePage extends TestBase {
 	public void getMouseHoverArchive() {
 		this.mouseHoverArchive.click();
 	}
+	
+	
+	
 
 }

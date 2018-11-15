@@ -31,5 +31,7 @@ public interface DesignInterface {
 
 	public default void searchForEmailInGrid() {
 	}
+	public default void dragDrop() throws InterruptedException {
+	}
 
 }
