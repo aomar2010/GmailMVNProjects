@@ -1,4 +1,4 @@
-package methods.crossover.com.gmail;
+package common;
 
 import static org.testng.Assert.assertEquals;
 
@@ -12,28 +12,37 @@ import org.openqa.selenium.interactions.Actions;
 import PageObjects.PomGmailHomePage;
 import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
-import PageObjects.PomSignin;
+import PageObjects.pomGmailLoginPage;
 import resources.TestBase;
 import resources.propertiesFile;
 
-abstract public class SharedMethod extends TestBase {
+ public class SharedMethod extends TestBase {
 
 	public static String subject ="qmbvnsbhithxtqaukzbe";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String filename = "test.txt";
 	public static WebElement row;
-	protected propertiesFile config = new propertiesFile();
+	public static propertiesFile config = new propertiesFile();
+	public static commonGmailLogin login=new commonGmailLogin();
+	public static commonSearchEmails search=new commonSearchEmails();
+	public static commonComposeEmail compose=new commonComposeEmail();
+	public static PomGmailHomePage homepage = new PomGmailHomePage(driver);
+	public static commonEmailContent content=new commonEmailContent();
+	
 
+/*
+ * 
+ 
 	@Override
 	public void logMeIn(String username, String password) {
 
-		PomSignin login = new PomSignin(driver);
+		pomGmailLoginPage login = new pomGmailLoginPage(driver);
 		log.info("-------- Type Sender ID");
-		login.getUsername(username);
+		login.typeUsername(username);
 		log.info("-------- Click Next");
 		login.getNext();
 		log.info("-------- Type Sender password  ID");
-		login.getPassword(password);
+		login.typePassword(password);
 		log.info("-------- Click Next");
 		login.getNextPassword();
 		//
@@ -52,7 +61,7 @@ abstract public class SharedMethod extends TestBase {
 		}
 
 	}
-
+*/
 	@Override
 	public void composeEmail(String emailto) {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
@@ -99,27 +108,7 @@ abstract public class SharedMethod extends TestBase {
 	}
 
 	// Search for the email
-	@Override
-	public void searchEmail() {
-		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-
-		System.out.println("Open email with Subject " + subject);
-		for (int i = 0; i < homepage.getEmails().size(); i++) {
-			if (homepage.getEmails().get(i).getText().contains(subject)) {
-				//
-				row = homepage.getEmails().get(i);
-				System.out.println("Open email with Subject " + subject);
-
-			}
-
-			else {
-				log.info("-------- Email is not found ");
-				i = homepage.getEmails().size();
-
-			}
-		}
-
-	}
+	
 
 	// check the email content
 	@Override
@@ -170,11 +159,11 @@ abstract public class SharedMethod extends TestBase {
 	}
 
 	@Override
-	public void logMeOut() {
-		PomGmailHomePage homepage = new PomGmailHomePage(driver);
+	public void logMeOut() throws InterruptedException {
        
 		homepage.getUserLogout();
 		homepage.getLogout();
+		Thread.sleep(2000);
 		driver.manage().deleteAllCookies();
 		driver.navigate().to("http://gmail.com");
 	}

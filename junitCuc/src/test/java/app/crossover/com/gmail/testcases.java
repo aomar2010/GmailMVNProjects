@@ -9,13 +9,15 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import methods.crossover.com.gmail.SharedMethod;
+import common.SharedMethod;
+import common.commonGmailLogin;
 import resources.propertiesFile;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class testcases extends SharedMethod {
-	propertiesFile config = new propertiesFile();
+public  class testcases extends SharedMethod {
+	
+
 
 	/*
 	 * Test case 1 , create new email 1. Login to Gmail - Sender user 2. create the
@@ -28,11 +30,11 @@ public class testcases extends SharedMethod {
 
 		log.info("login with the sender\n");
 		// login to sender email then Tab Compose
-		logMeIn(config.getreciever(), config.getpasswotd());
+		login.gmailLogin(config.getreciever(), config.getpasswotd());
 	
 		// Type the email
-		searchEmail();
-		dragDrop();
+	//	searchEmail();
+	//	dragDrop();
 		// Logout
 		// logoutMthd();
 	}
@@ -58,6 +60,7 @@ public class testcases extends SharedMethod {
 	@Before
 	public void beforeMethod() throws IOException {
 		System.out.println("New driver instantiated \n");
+
 		driver = initializeDriver();
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getimplicitlyWait()), TimeUnit.SECONDS);
 		System.out.println("Type URL\n");

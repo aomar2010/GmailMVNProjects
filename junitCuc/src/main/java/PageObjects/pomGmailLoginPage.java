@@ -9,11 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class PomSignin {
+public class pomGmailLoginPage {
 
 	WebDriver driver;
 
-	public PomSignin(WebDriver driver) {
+	public pomGmailLoginPage(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 
@@ -35,24 +35,24 @@ public class PomSignin {
 	private WebElement wrongPassword;
 
 	// get username
-	public void getUsername(String userName) {
+	public void typeUsername(String userName) {
 		this.userName.sendKeys(userName);
 	}
 
 	// return Next
-	public void getNext() {
+	public void clickNext() {
 		this.next.click();
 
 	}
 
 	// return password
-	public void getPassword(String password) {
+	public void typePassword(String password) {
 
 		this.password.sendKeys(password);
 	}
 
 	// return next button after password
-	public void getNextPassword() {
+	public void clickNextPassword() {
 
 		this.nextPassword.click();
 	}

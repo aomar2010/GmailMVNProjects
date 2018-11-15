@@ -110,6 +110,8 @@ public class PomGmailHomePage extends TestBase {
 	public void getMouseHoverArchive() {
 		this.mouseHoverArchive.click();
 	}
+
+
 	
 	
 	

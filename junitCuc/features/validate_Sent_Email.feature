@@ -7,11 +7,15 @@ Scenario: Login and compose email with attached file
 	When  Navigate to gmail.com
 	And Login with sender email and Password
 	Then Compose the Email
-	Then Logout 
+	And Quit the driver
+
 	
 Scenario: Login and compose email with attached file 
+
 	
-	Given Login RecieverEmail  and Password
-	Then Open the Email with Specific title 
-	And Quit the driver
+	Given Open chrome for get the emails
+	When Navigate to gmail.com to get the emails
+	Then Login RecieverEmail and Password
+	And Open the Email with Specific title 
+	Then Quit the driver After search
 	

@@ -10,7 +10,7 @@ public interface DesignInterface {
 
 	}
 
-	public default void logMeOut() {
+	public default void logMeOut() throws InterruptedException {
 
 	}
 
@@ -32,6 +32,9 @@ public interface DesignInterface {
 	public default void searchForEmailInGrid() {
 	}
 	public default void dragDrop() throws InterruptedException {
+	}
+
+	public default	void gmailLogin(String username, String password) {
 	}
 
 }

@@ -60,4 +60,10 @@ public class PomMailbody extends TestBase {
 
 	}
 
+	@Override
+	public void gmailLogin(String username, String password) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
