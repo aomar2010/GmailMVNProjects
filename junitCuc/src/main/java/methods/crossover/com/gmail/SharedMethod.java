@@ -1,8 +1,8 @@
 package methods.crossover.com.gmail;
 
-import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import static org.junit.Assert.assertEquals;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.JavascriptExecutor;
