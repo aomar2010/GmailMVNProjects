@@ -49,7 +49,7 @@ public class testcases extends SharedMethod {
 		logMeIn(config.getreciever(), config.getpasswotd());
 		logMeOut();
 		// Open the received email
-		// searchEmail();
+		 searchEmail();
 		log.info("verify the email \n");
 		// emailContent();
 
