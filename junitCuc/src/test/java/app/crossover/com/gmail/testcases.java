@@ -31,8 +31,8 @@ public class testcases extends SharedMethod {
 		logMeIn(config.getreciever(), config.getpasswotd());
 	
 		// Type the email
-		searchEmail();
-		dragDrop();
+	//	searchEmail();
+	//	dragDrop();
 		// Logout
 		// logoutMthd();
 	}
