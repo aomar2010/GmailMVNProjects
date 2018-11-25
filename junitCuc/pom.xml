@@ -30,9 +30,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M1</version>
        	<configuration>
-            <groups>app.crossover.com.gmail.testcases</groups>
              <includes>
-            <include>app.crossover.com.gmail.testcases.java</include>
+            <include>app.crossover.com.gmail.Runner.java</include>
           </includes>
         </configuration>
 				

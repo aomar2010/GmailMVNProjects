@@ -32,3 +32,11 @@
 14:18:41.726 [main] INFO  resources.TestBase - -------- Click Next
 14:18:42.391 [main] INFO  resources.TestBase - -------- Type Sender password  ID
 14:18:43.791 [main] INFO  resources.TestBase - -------- Click Next
+14:21:18.458 [main] INFO  resources.TestBase - login with the sender
+
+14:21:18.503 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:21:19.488 [main] INFO  resources.TestBase - -------- Click Next
+14:21:19.867 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+14:21:21.933 [main] INFO  resources.TestBase - -------- Click Next
+14:24:40.209 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:25:35.583 [main] INFO  resources.TestBase - -------- Type Sender ID
