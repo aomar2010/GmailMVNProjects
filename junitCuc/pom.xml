@@ -24,7 +24,19 @@
             <version>3.6.0</version>
             <configuration	>
             </configuration>
-        </plugin>
+                    </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M1</version>
+       	<configuration>
+            <groups>app.crossover.com.gmail.testcases</groups>
+             <includes>
+            <include>app.crossover.com.gmail.testcases.java</include>
+          </includes>
+        </configuration>
+				
+			</plugin>
     </plugins>
 </build>
   <dependencies>
@@ -101,12 +113,8 @@
     <version>6.14.3</version>
     <scope>test</scope>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.19.1</version>
-</dependency>
+
+
 
   </dependencies>
 </project>

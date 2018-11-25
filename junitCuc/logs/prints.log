@@ -20,3 +20,15 @@
 00:07:29.564 [main] INFO  resources.TestBase - -------- Type Sender password  ID
 00:07:30.702 [main] INFO  resources.TestBase - -------- Click Next
 00:07:44.977 [main] INFO  resources.TestBase - -------- Email is not found 
+13:38:01.404 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:38:13.399 [main] INFO  resources.TestBase - login with the sender
+
+13:38:13.400 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:45:47.966 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:45:54.065 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:18:40.975 [main] INFO  resources.TestBase - login with the sender
+
+14:18:41.041 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:18:41.726 [main] INFO  resources.TestBase - -------- Click Next
+14:18:42.391 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+14:18:43.791 [main] INFO  resources.TestBase - -------- Click Next
