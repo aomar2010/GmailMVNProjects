@@ -7,13 +7,13 @@ import java.util.Properties;
 public class propertiesFile {
 
 	//
-	String sender;
-	String receiver;
-	String browSerName;
-	String targetUrl;
-	String password;
-	String implicitlyWait;
-	String driverPath;
+private	String sender;
+private String receiver;
+private	String browSerName;
+private	String targetUrl;
+private	String password;
+private	String implicitlyWait;
+private	String driverPath;
 
 	//
 	public propertiesFile() {
