@@ -1,0 +1,74 @@
+00:05:10.216 [main] INFO  resources.TestBase - -------- Click Next
+00:05:10.595 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+00:05:12.015 [main] INFO  resources.TestBase - -------- Click Next
+00:05:26.309 [main] INFO  resources.TestBase - -------- Type Sender ID
+00:05:27.550 [main] INFO  resources.TestBase - -------- Type Subject
+00:05:27.991 [main] INFO  resources.TestBase - -------- Type Body
+00:05:28.533 [main] INFO  resources.TestBase - -------- Attache the file 
+00:05:43.895 [main] INFO  resources.TestBase - -------- Click Send 
+00:06:44.889 [main] INFO  resources.TestBase - -------- Type Sender ID
+00:06:45.551 [main] INFO  resources.TestBase - -------- Click Next
+00:06:45.901 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+00:06:47.195 [main] INFO  resources.TestBase - -------- Click Next
+00:07:01.297 [main] INFO  resources.TestBase - -------- Type Sender ID
+00:07:02.624 [main] INFO  resources.TestBase - -------- Type Subject
+00:07:03.063 [main] INFO  resources.TestBase - -------- Type Body
+00:07:03.619 [main] INFO  resources.TestBase - -------- Attache the file 
+00:07:18.964 [main] INFO  resources.TestBase - -------- Click Send 
+00:07:28.818 [main] INFO  resources.TestBase - -------- Type Sender ID
+00:07:29.334 [main] INFO  resources.TestBase - -------- Click Next
+00:07:29.564 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+00:07:30.702 [main] INFO  resources.TestBase - -------- Click Next
+00:07:44.977 [main] INFO  resources.TestBase - -------- Email is not found 
+13:38:01.404 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:38:13.399 [main] INFO  resources.TestBase - login with the sender
+
+13:38:13.400 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:45:47.966 [main] INFO  resources.TestBase - -------- Type Sender ID
+13:45:54.065 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:18:40.975 [main] INFO  resources.TestBase - login with the sender
+
+14:18:41.041 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:18:41.726 [main] INFO  resources.TestBase - -------- Click Next
+14:18:42.391 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+14:18:43.791 [main] INFO  resources.TestBase - -------- Click Next
+14:21:18.458 [main] INFO  resources.TestBase - login with the sender
+
+14:21:18.503 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:21:19.488 [main] INFO  resources.TestBase - -------- Click Next
+14:21:19.867 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+14:21:21.933 [main] INFO  resources.TestBase - -------- Click Next
+14:24:40.209 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:25:35.583 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:27:39.859 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:27:41.627 [main] INFO  resources.TestBase - -------- Click Next
+14:27:41.981 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+14:27:43.459 [main] INFO  resources.TestBase - -------- Click Next
+14:28:02.423 [main] INFO  resources.TestBase - -------- Type Sender ID
+14:28:04.949 [main] INFO  resources.TestBase - -------- Type Subject
+14:28:05.743 [main] INFO  resources.TestBase - -------- Type Body
+14:28:06.398 [main] INFO  resources.TestBase - -------- Attache the file 
+14:28:36.557 [main] INFO  resources.TestBase - -------- Click Send 
+14:28:49.895 [main] INFO  resources.TestBase - -------- Type Sender ID
+16:16:16.242 [main] INFO  resources.TestBase - -------- Type Sender ID
+16:16:16.735 [main] INFO  resources.TestBase - -------- Click Next
+16:16:17.043 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+16:16:18.057 [main] INFO  resources.TestBase - -------- Click Next
+16:16:32.974 [main] INFO  resources.TestBase - -------- Type Sender ID
+16:16:34.509 [main] INFO  resources.TestBase - -------- Type Subject
+16:16:35.102 [main] INFO  resources.TestBase - -------- Type Body
+16:16:35.624 [main] INFO  resources.TestBase - -------- Attache the file 
+16:16:51.104 [main] INFO  resources.TestBase - -------- Click Send 
+16:40:31.423 [main] INFO  resources.TestBase - -------- Type Sender ID
+16:40:33.368 [main] INFO  resources.TestBase - -------- Click Next
+16:40:33.851 [main] INFO  resources.TestBase - -------- Type Sender password  ID
+16:40:36.760 [main] INFO  resources.TestBase - -------- Click Next
+16:41:01.820 [main] INFO  resources.TestBase - -------- Type Sender ID
+16:41:06.142 [main] INFO  resources.TestBase - -------- Type Subject
+16:41:06.815 [main] INFO  resources.TestBase - -------- Type Body
+16:41:07.461 [main] INFO  resources.TestBase - -------- Attache the file 
+16:41:22.811 [main] INFO  resources.TestBase - -------- Click Send 
+16:41:36.156 [main] INFO  resources.TestBase - -------- Type Sender ID
+17:38:00.494 [main] INFO  resources.TestBase - login with the sender
+
+17:38:00.566 [main] INFO  resources.TestBase - -------- Type Sender ID

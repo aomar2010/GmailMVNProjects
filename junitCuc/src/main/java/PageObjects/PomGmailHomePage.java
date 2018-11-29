@@ -17,7 +17,7 @@ public class PomGmailHomePage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	// find compose button
+	// find compose buttons
 	@FindBy(how = How.XPATH, using = "//*[@gh='cm']")
 	private WebElement compose;
 

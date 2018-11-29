@@ -14,12 +14,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-abstract public class TestBase implements DesignInterface {
+public abstract class TestBase implements DesignInterface {
 
 	public static WebDriver driver;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
-
-	//
+	/*
 	private	String sender;
 	private	String receiver;
 	private String browSerName;
@@ -27,7 +26,7 @@ abstract public class TestBase implements DesignInterface {
 	private	String password;
 	private	String implicitlyWait;
 	private	String driverPath;
-	//
+	 */
 
 	public WebDriver initializeDriver() throws IOException {
 

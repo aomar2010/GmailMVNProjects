@@ -1,31 +1,28 @@
 package methods.crossover.com.gmail;
 
-
-import java.io.IOException;
-import static org.junit.Assert.assertEquals;
-
-import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import PageObjects.PomGmailHomePage;
 import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
 import PageObjects.PomSignin;
+import java.io.IOException;
+import static org.junit.Assert.assertEquals;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import resources.TestBase;
 import resources.propertiesFile;
 
-abstract public class SharedMethod extends TestBase {
+public abstract  class SharedMethod extends TestBase {
 
-	public static String subject ="qmbvnsbhithxtqaukzbe";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
+	public static String subject = "qmbvnsbhithxtqaukzbe";// RandomStringUtils.randomAlphabetic(20).toLowerCase();
 	public static String body = RandomStringUtils.randomAlphabetic(20).toLowerCase();
-	public static String filename = "test.txt";
+	public static String filename="test.txt";
 	public static WebElement row;
 	protected propertiesFile config = new propertiesFile();
 
 	@Override
-	public void logMeIn(String username, String password) {
+	public void logMeIn(String username,String password) {
 
 		PomSignin login = new PomSignin(driver);
 		log.info("-------- Type Sender ID");
@@ -172,7 +169,7 @@ abstract public class SharedMethod extends TestBase {
 	@Override
 	public void logMeOut() {
 		PomGmailHomePage homepage = new PomGmailHomePage(driver);
-       
+
 		homepage.getUserLogout();
 		homepage.getLogout();
 		driver.manage().deleteAllCookies();
@@ -203,23 +200,22 @@ abstract public class SharedMethod extends TestBase {
 		}
 
 	}
+
 	@Override
 	public void dragDrop() throws InterruptedException {
-		PomGmailHomePage homePage=new PomGmailHomePage(driver);
-		
-		
+		PomGmailHomePage homePage = new PomGmailHomePage(driver);
+
 		Actions action = new Actions(driver);
 		action.moveToElement(homePage.lefttab);
-		
-			Thread.sleep(2000);
-	
+
+		Thread.sleep(2000);
+
 		//// scroll
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].scrollIntoView();", homePage.dragTo);
-		
-		 action.dragAndDrop(row,homePage.dragTo).build().perform();
-		 // System.out.println("done");
-		
-		
-	} 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", homePage.dragTo);
+
+		action.dragAndDrop(row, homePage.dragTo).build().perform();
+		// System.out.println("done");
+
+	}
 }
