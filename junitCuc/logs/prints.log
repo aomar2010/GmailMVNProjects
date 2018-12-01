@@ -43,3 +43,8 @@
 20:46:23.350 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
 20:46:25.016 [main] INFO  resources.TestBase - --------gmailLogin Click Next
 20:46:48.246 [main] INFO  resources.TestBase - -------- Email is not found 
+10:50:22.810 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+10:50:23.371 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+10:50:23.652 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+10:50:25.021 [main] INFO  resources.TestBase - --------gmailLogin Click Next
+10:50:28.747 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
