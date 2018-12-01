@@ -48,3 +48,17 @@
 10:50:23.652 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
 10:50:25.021 [main] INFO  resources.TestBase - --------gmailLogin Click Next
 10:50:28.747 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+11:11:01.284 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+11:11:02.297 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+11:11:02.607 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+11:11:04.146 [main] INFO  resources.TestBase - --------gmailLogin Click Next
+11:11:20.220 [main] INFO  resources.TestBase - -------- Type Sender ID
+11:11:21.490 [main] INFO  resources.TestBase - -------- Type Subject
+11:11:22.134 [main] INFO  resources.TestBase - -------- Type Body
+11:11:22.744 [main] INFO  resources.TestBase - -------- Attache the file 
+11:11:45.777 [main] INFO  resources.TestBase - -------- Click Send 
+11:11:57.661 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+11:11:58.206 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+11:11:58.523 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+11:11:59.685 [main] INFO  resources.TestBase - --------gmailLogin Click Next
+11:12:16.650 [main] INFO  resources.TestBase - -------- Email is not found 
