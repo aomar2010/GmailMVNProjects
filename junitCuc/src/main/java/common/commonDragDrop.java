@@ -4,8 +4,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
 import PageObjects.PomGmailHomePage;
+import lombok.Data;
 
-public class commonDragDrop extends SharedMethod{
+public @Data class commonDragDrop extends SharedMethod{
 
 	@Override
 	public void dragDrop() throws InterruptedException {

@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import lombok.Builder;
+
+
 public class propertiesFile {
 
 	//
@@ -18,7 +21,6 @@ public class propertiesFile {
 	//
 	public propertiesFile() {
 
-		String ar[] = new String[5];
 		Properties prop = new Properties();
 		FileInputStream input = null;
 		try {

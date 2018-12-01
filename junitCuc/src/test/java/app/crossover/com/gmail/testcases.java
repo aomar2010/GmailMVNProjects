@@ -11,12 +11,21 @@ import org.junit.runners.MethodSorters;
 
 import common.SharedMethod;
 import common.commonGmailLogin;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import resources.propertiesFile;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public  class testcases extends SharedMethod {
-	
+@Builder
+@EqualsAndHashCode
+public class testcases extends SharedMethod {
+	@Getter @Setter
+public String age;
+
 
 
 	/*
@@ -72,6 +81,11 @@ public  class testcases extends SharedMethod {
 	public void afterMethod() {
 		driver.quit();
 		driver = null;
+	}
+
+	@Override
+	public String toString() {
+		return "testcases [age=" + age + "]";
 	}
 
 }
