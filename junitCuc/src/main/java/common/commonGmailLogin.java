@@ -17,6 +17,8 @@ public class commonGmailLogin extends SharedMethod {
 	public void gmailLogin(String username, String password) {
 
 		pomGmailLoginPage login = new pomGmailLoginPage(driver);
+		log.info("-------- gmailLogin ClickSignIn");
+		login.clickSignIn();
 		log.info("-------- gmailLogin Type gmail ID");
 		login.typeUsername(username);
 		log.info("-------- gmailLogin Click Next");

@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -48,10 +49,13 @@ abstract public class TestBase implements DesignInterface {
 	      WebDriverManager.chromedriver().setup();
 	      driver = new ChromeDriver();
 		} else if (file.getbrowser().equals("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			// firefox code
-		} else if (file.getbrowser().equals("IE")) {
+		} else if (file.getbrowser().equals("Edge")) {
 			// IE code
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;

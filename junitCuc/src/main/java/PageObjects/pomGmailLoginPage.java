@@ -19,6 +19,9 @@ public class pomGmailLoginPage {
 
 	}
 
+	@FindBy(how = How.CSS, using = " a.gmail-nav__nav-link.gmail-nav__nav-link__sign-in")
+	private WebElement signIn;
+	
 	@FindBy(how = How.XPATH, using = "//*[@id='identifierId']")
 	private WebElement userName;
 
@@ -34,6 +37,12 @@ public class pomGmailLoginPage {
 	@FindBy(how = How.XPATH, using = "//*[@jsname='B34EJ'][@class='dEOOab RxsGPe'][1]")
 	private WebElement wrongPassword;
 
+	
+	// click sign in
+	public void clickSignIn() {
+		this.signIn.click();
+
+	}
 	// get username
 	public void typeUsername(String userName) {
 		this.userName.sendKeys(userName);

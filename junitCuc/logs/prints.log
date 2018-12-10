@@ -1,50 +1,35 @@
-20:19:51.179 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:19:52.027 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:19:52.397 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:19:54.226 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:20:11.334 [main] INFO  resources.TestBase - -------- Type Sender ID
-20:20:13.147 [main] INFO  resources.TestBase - -------- Type Subject
-20:20:13.571 [main] INFO  resources.TestBase - -------- Type Body
-20:20:14.047 [main] INFO  resources.TestBase - -------- Attache the file 
-20:20:29.348 [main] INFO  resources.TestBase - -------- Click Send 
-20:24:45.134 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:24:45.637 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:24:45.959 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:24:47.116 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:25:06.771 [main] INFO  resources.TestBase - -------- Type Sender ID
-20:25:08.646 [main] INFO  resources.TestBase - -------- Type Subject
-20:25:09.614 [main] INFO  resources.TestBase - -------- Type Body
-20:25:10.812 [main] INFO  resources.TestBase - -------- Attache the file 
-20:25:26.621 [main] INFO  resources.TestBase - -------- Click Send 
-20:40:48.856 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:40:49.753 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:40:50.506 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:40:52.102 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:41:15.818 [main] INFO  resources.TestBase - -------- Type Sender ID
-20:41:17.679 [main] INFO  resources.TestBase - -------- Type Subject
-20:41:18.331 [main] INFO  resources.TestBase - -------- Type Body
-20:41:19.451 [main] INFO  resources.TestBase - -------- Attache the file 
-20:41:35.667 [main] INFO  resources.TestBase - -------- Click Send 
-20:44:05.373 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:44:06.013 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:44:06.638 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:44:08.287 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:45:16.153 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:45:16.658 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:45:16.940 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:45:18.253 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:45:39.622 [main] INFO  resources.TestBase - -------- Type Sender ID
-20:45:41.878 [main] INFO  resources.TestBase - -------- Type Subject
-20:45:42.589 [main] INFO  resources.TestBase - -------- Type Body
-20:45:43.614 [main] INFO  resources.TestBase - -------- Attache the file 
-20:46:04.634 [main] INFO  resources.TestBase - -------- Click Send 
-20:46:22.402 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-20:46:23.023 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-20:46:23.350 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-20:46:25.016 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-20:46:48.246 [main] INFO  resources.TestBase - -------- Email is not found 
-10:50:22.810 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
-10:50:23.371 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
-10:50:23.652 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
-10:50:25.021 [main] INFO  resources.TestBase - --------gmailLogin Click Next
-10:50:28.747 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+15:51:53.553 [main] INFO  resources.TestBase - login with the sender
+
+15:51:53.566 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+15:52:03.268 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+15:52:03.430 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+15:52:04.156 [main] INFO  resources.TestBase - --------gmailLogin Click Next
+15:53:18.984 [main] INFO  resources.TestBase - login with the sender
+
+15:53:18.997 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+16:00:58.518 [main] INFO  resources.TestBase - login with the sender
+
+16:00:58.525 [main] INFO  resources.TestBase - -------- gmailLogin ClickSignIn
+16:00:58.612 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+16:01:00.419 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+16:01:00.534 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+16:01:01.817 [main] INFO  resources.TestBase - --------gmailLogin Click Next
+16:01:23.828 [main] INFO  resources.TestBase - login with the sender
+
+16:01:23.840 [main] INFO  resources.TestBase - -------- gmailLogin ClickSignIn
+16:01:23.990 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+16:01:28.511 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+16:01:28.684 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+16:02:12.634 [main] INFO  resources.TestBase - login with the sender
+
+16:02:12.647 [main] INFO  resources.TestBase - -------- gmailLogin ClickSignIn
+16:02:12.799 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+16:02:16.079 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+16:02:16.271 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+16:02:50.478 [main] INFO  resources.TestBase - login with the sender
+
+16:02:50.492 [main] INFO  resources.TestBase - -------- gmailLogin ClickSignIn
+16:02:53.230 [main] INFO  resources.TestBase - -------- gmailLogin Type gmail ID
+16:02:53.683 [main] INFO  resources.TestBase - -------- gmailLogin Click Next
+16:02:53.983 [main] INFO  resources.TestBase - --------gmailLogin Type Sender password  ID
+16:02:54.952 [main] INFO  resources.TestBase - --------gmailLogin Click Next
