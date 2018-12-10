@@ -3,8 +3,6 @@ package StepDefinition;
 import java.io.IOException;
 
 import common.SharedMethod;
-import common.commonComposeEmail;
-import common.commonGmailLogin;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

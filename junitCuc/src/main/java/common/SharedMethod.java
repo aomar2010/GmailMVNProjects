@@ -1,18 +1,14 @@
 package common;
 
-import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import PageObjects.PomGmailHomePage;
 import PageObjects.PomMailbody;
-import PageObjects.PomReadMailBody;
-import PageObjects.pomGmailLoginPage;
 import resources.TestBase;
 import resources.propertiesFile;
 

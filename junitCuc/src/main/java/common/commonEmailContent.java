@@ -1,13 +1,7 @@
 package common;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import java.io.IOException;
-
-import org.openqa.selenium.interactions.Actions;
-
-import PageObjects.PomGmailHomePage;
-import PageObjects.PomMailbody;
 import PageObjects.PomReadMailBody;
 
 public class commonEmailContent extends SharedMethod {
