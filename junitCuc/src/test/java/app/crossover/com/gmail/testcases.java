@@ -10,13 +10,10 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import common.SharedMethod;
-import common.commonGmailLogin;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import resources.propertiesFile;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 

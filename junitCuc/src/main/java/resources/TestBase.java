@@ -14,6 +14,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 abstract public class TestBase implements DesignInterface {
 
 	public static WebDriver driver;
@@ -35,12 +38,15 @@ abstract public class TestBase implements DesignInterface {
 		propertiesFile file = new propertiesFile();
 		if (file.getbrowser().equals("chrome")) {
 
+/*
 			System.setProperty("webdriver.chrome.driver", file.getChromedriverpath());
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--start-maximized");
 			driver = new ChromeDriver(chromeOptions);
 			// execute in chrome driver
-
+*/
+	      WebDriverManager.chromedriver().setup();
+	      driver = new ChromeDriver();
 		} else if (file.getbrowser().equals("firefox")) {
 			driver = new FirefoxDriver();
 			// firefox code
